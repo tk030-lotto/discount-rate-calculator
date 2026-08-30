@@ -34,6 +34,14 @@
 - `README.md` にプレビュー画像を追記
 - Gitコミット & GitHubリモートプッシュ完了
 
+## 2026-08-30 GitHub Pages公開準備完了（未公開状態）
+- `.nojekyll` の配置（Jekyllビルドスキップ設定）
+- `index.html` への想定公開URL（`https://tk030-lotto.github.io/discount-rate-calculator/`）、Canonical、OGP（`og:url`, `og:image`）、Twitterカードメタタグの設定完了
+- `README.md` に公開準備情報を追記
+- 全アセット・相対リンクの検証完了（外部依存ゼロ・静的配信完全対応）
+- Gitコミット & GitHubリモートプッシュ完了
+
+
 
 
 
