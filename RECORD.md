@@ -4,4 +4,6 @@
 - GitHubプライベートリポジトリ作成（リポジトリ名: `discount-rate-calculator`）
 - 各種情報フォルダからのルール一括同期（`.cursorrules`, `.clauderules`, `.clinerules`, `SKILLS.md`, `.github/copilot-instructions.md`, `.agents/AGENTS.md`, `.agents/mcp_config.json`, `.agents/agents/*`, `knowledge/*.md`, `.gitignore`, `AI_RULES.md`）
 - `README.md` / `仕様書.md` / `LICENSE` の登録、初期コミット・GitHubプッシュ完了
+- `README.md` のライセンス項目にMITライセンス全文・著作権表示を追記
 - プロジェクト直下および各種情報フォルダに `RECORD.md` を配置
+
