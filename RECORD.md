@@ -18,8 +18,16 @@
 - 「AI開発コンテキスト管理MCPツール」および「AIコンテキスト管理ツールV3」による横断的品質監査を実施
 - 仕様書全13章とのトレーサビリティ突合（12/12項目適合）、Zero-Dependency、セキュリティ、アクセシビリティ、UI/UXデザイン標準の全9カテゴリを検証
 - 総合判定: **PASS（合格 / 100点）**
-- `audit_report.md` を作成し、プロジェクト直下および各種情報フォルダ（`Projects/割引率らくらく計算/`）に永続保存
 - Gitコミット & GitHubリモートプッシュ完了
+
+## 2026-08-30 AI開発共通CLI (ai-dev-cli) による環境・ルール健全性監査完了
+- `ai-dev doctor all`: 実行環境・Git・ルール・MCP・エージェント定義の全20項目 PASS (100%)
+- `ai-dev sync status`: 中央正本（`各種情報`）との20項目完全一致 PASS (100%)
+- `ai-dev context stats`: 15ファイル (~35,660 tok) の構造・トークン効率検証 PASS
+- `ai-dev skill check`: 全9スキルの構文・ドメイン知識整合性検証 PASS
+- `audit_report.md` を更新し、各種情報フォルダ（`Projects/割引率らくらく計算/`）に同期
+- Gitコミット & GitHubリモートプッシュ完了
+
 
 
 
