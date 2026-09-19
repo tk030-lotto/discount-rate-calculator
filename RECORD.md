@@ -53,6 +53,13 @@
 - **ブラウザ自律検証完了**: Browser Subagent により、UI表示、文字化け解消、リアルタイム計算、プリセットチップ、コピー・共有アクションの正常動作を完全確認。
 - Gitコミット完了。
 
+## 2026-09-19 リポジトリ公開 & GitHub Pages デプロイ完了
+- **リポジトリ公開設定変更**: GitHub CLI（`gh repo edit`）により可視性を `private` から `public` に変更完了。
+- **GitHub Pages 有効化**: `main` ブランチのルートディレクトリ（`/`）を配信ソースとして GitHub Pages を有効化。
+- **デプロイ疎通検証**: 公開URL（`https://tk030-lotto.github.io/discount-rate-calculator/`）へアクセスし、`status: built` および HTML/静的リソースの200 OK配信を検証完了。
+- **ドキュメント更新**: `README.md` の公開URL項目を正式公開URLに更新。
+
+
 
 
 

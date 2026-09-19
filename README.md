@@ -133,9 +133,9 @@ node tests/test_calculator.js
 
 ## 公開について
 
-本ツールはGitHub Pagesで利用できる無料Webツールとして配信準備が完了しています。
+本ツールはGitHub Pagesで利用できる無料Webツールとして公開中です。
 
-- **想定公開URL**: [https://tk030-lotto.github.io/discount-rate-calculator/](https://tk030-lotto.github.io/discount-rate-calculator/)
+- **公開URL**: [https://tk030-lotto.github.io/discount-rate-calculator/](https://tk030-lotto.github.io/discount-rate-calculator/)
 - インストール不要でブラウザから直接ご利用いただけます。
 
 ## ライセンス
