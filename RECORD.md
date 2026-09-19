@@ -58,6 +58,7 @@
 - **GitHub Pages 有効化**: `main` ブランチのルートディレクトリ（`/`）を配信ソースとして GitHub Pages を有効化。
 - **デプロイ疎通検証**: 公開URL（`https://tk030-lotto.github.io/discount-rate-calculator/`）へアクセスし、`status: built` および HTML/静的リソースの200 OK配信を検証完了。
 - **ドキュメント更新**: `README.md` の公開URL項目を正式公開URLに更新。
+- **note記事原稿更新**: `「50%OFF＋30%OFF」は80%OFFじゃない？.txt` の見出し直下および末尾にGitHub Pages公開URL、GitHubリポジトリURL、ハッシュタグを追記完了。
 
 
 
