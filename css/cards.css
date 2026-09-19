@@ -1,0 +1,213 @@
+/* ==========================================================================
+   割引率らくらく計算 - Cards & Summary Results
+   Protocols: Base Card, Alert / Misconception Card, Summary Card, Stat Grid
+   ========================================================================== */
+
+/* Card Styles */
+.calc-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-md);
+  transition: border-color var(--transition-smooth);
+}
+
+.calc-card:hover {
+  border-color: rgba(59, 130, 246, 0.3);
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.card-title {
+  font-size: 1.05rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-main);
+}
+
+/* Results Column */
+.results-column {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+/* Alert / Misconception Card */
+.alert-card {
+  background-color: var(--accent-amber-glow);
+  border-color: rgba(245, 158, 11, 0.3);
+  padding: 1rem 1.25rem;
+  animation: fadeIn 0.3s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.alert-header {
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start;
+}
+
+.alert-icon-wrapper {
+  color: var(--accent-amber);
+  margin-top: 0.1rem;
+}
+
+.alert-content {
+  flex: 1;
+}
+
+.alert-title {
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text-warning);
+  margin-bottom: 0.25rem;
+}
+
+.rate-strike {
+  text-decoration: line-through;
+  opacity: 0.8;
+  font-family: var(--font-mono);
+}
+
+.alert-desc {
+  font-size: 0.85rem;
+  color: #fde68a;
+  line-height: 1.5;
+}
+
+/* Main Result Summary Card */
+.result-summary-card {
+  position: relative;
+  background: linear-gradient(180deg, #16161b 0%, #111114 100%);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  box-shadow: var(--shadow-glow), var(--shadow-lg);
+  padding: 1.75rem;
+}
+
+.result-badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  padding: 0.2rem 0.6rem;
+  background-color: var(--accent-emerald-glow);
+  border: 1px solid var(--accent-emerald);
+  color: var(--accent-emerald);
+  font-size: 0.7rem;
+  font-weight: 600;
+  border-radius: var(--radius-full);
+  letter-spacing: 0.05em;
+}
+
+.final-price-wrapper {
+  margin-bottom: 1.5rem;
+}
+
+.final-price-label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.final-price-row {
+  display: flex;
+  align-items: baseline;
+  gap: 0.25rem;
+}
+
+.final-currency {
+  font-family: var(--font-mono);
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: var(--accent-emerald);
+}
+
+.final-price-value {
+  font-family: var(--font-mono);
+  font-size: 3rem;
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+.tax-hint {
+  font-size: 0.75rem;
+  color: var(--text-dim);
+  margin-left: 0.35rem;
+}
+
+/* Stats Grid */
+.stats-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+}
+
+.stat-box {
+  background-color: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: var(--radius-md);
+  padding: 0.85rem 1rem;
+}
+
+.stat-box.highlight-box {
+  background-color: var(--accent-emerald-glow);
+  border-color: rgba(16, 185, 129, 0.2);
+}
+
+.stat-label {
+  display: block;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-bottom: 0.25rem;
+}
+
+.stat-value-group {
+  display: flex;
+  align-items: baseline;
+  gap: 0.2rem;
+}
+
+.stat-value {
+  font-family: var(--font-mono);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.stat-rate {
+  color: var(--accent-emerald);
+}
+
+.stat-saved {
+  color: var(--text-primary);
+}
+
+.stat-unit, .stat-prefix {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-muted);
+}
+
+.result-actions {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 0.75rem;
+}
