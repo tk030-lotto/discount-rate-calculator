@@ -1,11 +1,12 @@
 /* ==========================================================================
    割引率らくらく計算 - Stylesheet Entry Point
-   Architecture: Modular CSS (Tokens, Base, Forms, Cards, Timeline)
+   Architecture: Modular CSS (Tokens, Base, Forms, Buttons, Cards, Timeline)
    All modules are strictly under 300 lines for maximum maintainability.
    ========================================================================== */
 
 @import './css/tokens.css';
 @import './css/base.css';
 @import './css/forms.css';
+@import './css/buttons.css';
 @import './css/cards.css';
 @import './css/timeline.css';

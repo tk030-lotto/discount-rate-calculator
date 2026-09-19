@@ -9,9 +9,6 @@
 
   /**
    * トースト通知の表示
-   * @param {HTMLElement} container
-   * @param {string} message
-   * @param {number} [duration=2500]
    */
   const showToast = (container, message, duration = 2500) => {
     if (!container) return;
@@ -35,9 +32,7 @@
 
     setTimeout(() => {
       toast.classList.add('toast-out');
-      toast.addEventListener('animationend', () => {
-        toast.remove();
-      });
+      toast.addEventListener('animationend', () => toast.remove());
     }, duration);
   };
 
@@ -47,7 +42,6 @@
   const renderTimeline = (container, calcResult, rounding) => {
     if (!container) return;
     container.innerHTML = '';
-
     const { formatCurrency, applyRounding } = root.Calculator;
 
     calcResult.steps.forEach((step, idx) => {
@@ -78,7 +72,6 @@
       const roundedStepPrice = applyRounding(step.priceAfter, rounding);
       price.textContent = `¥${formatCurrency(roundedStepPrice)}`;
       header.appendChild(price);
-
       content.appendChild(header);
 
       if (!isInitial) {
@@ -110,7 +103,6 @@
   const renderDiscountInputs = (container, state, onUpdate) => {
     if (!container) return;
     container.innerHTML = '';
-
     const { PRESET_DISCOUNTS } = root.CalculatorState;
 
     state.discounts.forEach((discount, idx) => {
@@ -246,17 +238,15 @@
   };
 
   /**
-   * 条件付きURLの共有（Web Share API 優先 + クリップボードフォールバック）
+   * 条件付きURLの共有
    */
   const shareConditions = async (state, toastContainer) => {
     const url = new URL(window.location.href);
     url.searchParams.set('p', state.price);
     url.searchParams.set('d', state.discounts.join(','));
     url.searchParams.set('r', state.rounding);
-
     const shareUrl = url.toString();
 
-    // モバイル環境などで Web Share API が利用可能な場合は優先起動
     if (navigator.share) {
       try {
         await navigator.share({
@@ -266,12 +256,10 @@
         });
         return;
       } catch (err) {
-        // ユーザーキャンセル時は何もしない
         if (err.name === 'AbortError') return;
       }
     }
 
-    // Web Share API 非対応または失敗時はクリップボードコピー
     try {
       if (navigator.clipboard && navigator.clipboard.writeText) {
         await navigator.clipboard.writeText(shareUrl);
