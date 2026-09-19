@@ -60,10 +60,20 @@
         .map((d) => `${d}%引き`)
         .join('、さらに');
 
-      elMisconceptionText.innerHTML = `
-        割引後の価格に対して次の割引が順番に適用されるため（${firstStepText} → ${nextStepsText}）、<br>
-        実質的な割引率は <strong>${formatPercent(calcResult.effectiveRate)}% OFF</strong>（¥${formatCurrency(calcResult.savedAmount)} 引き）となります。
-      `;
+      // innerHTML への動的値注入を避け、DOM操作で安全に構築
+      elMisconceptionText.textContent = '';
+      const line1 = document.createElement('span');
+      line1.textContent = `割引後の価格に対して次の割引が順番に適用されるため（${firstStepText} → ${nextStepsText}）、`;
+      const br = document.createElement('br');
+      const line2pre = document.createTextNode('実質的な割引率は ');
+      const strong = document.createElement('strong');
+      strong.textContent = `${formatPercent(calcResult.effectiveRate)}% OFF`;
+      const line2post = document.createTextNode(`（¥${formatCurrency(calcResult.savedAmount)} 引き）となります。`);
+      elMisconceptionText.appendChild(line1);
+      elMisconceptionText.appendChild(br);
+      elMisconceptionText.appendChild(line2pre);
+      elMisconceptionText.appendChild(strong);
+      elMisconceptionText.appendChild(line2post);
     } else {
       elMisconceptionCard.style.display = 'none';
     }
