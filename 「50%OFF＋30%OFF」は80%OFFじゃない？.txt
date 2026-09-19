@@ -4,6 +4,9 @@
 
 ## ――割引の計算を一目で確認できる「割引率らくらく計算」
 
+▼ 無料・登録不要ですぐに使えるWebツールはこちら
+https://tk030-lotto.github.io/discount-rate-calculator/
+
 買い物をしていると、
 
 **「店内50%OFF、さらに商品が30%OFF！」**
@@ -523,3 +526,14 @@
 無料・登録不要で使えます。
 
 買い物中に「これ、いったいいくらになるんだ？」と思ったときに、使ってみてください。
+
+---
+
+### ツールURL
+▼ 割引率らくらく計算（ブラウザ完結・無料）
+https://tk030-lotto.github.io/discount-rate-calculator/
+
+### GitHubリポジトリ
+https://github.com/tk030-lotto/discount-rate-calculator
+
+#割引 #セール #買い物 #節約 #割引計算 #Webツール #便利ツール #オープンソース
