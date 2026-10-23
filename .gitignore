@@ -45,3 +45,4 @@ tests/
 
 # 開発ドキュメント除外（フェーズ2-B）
 audit_report*.md
+`n# 仕様書除外（フェーズ2-C-β）`nSPECIFICATION*.md`n仕様書*.md
